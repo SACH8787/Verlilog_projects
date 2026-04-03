@@ -1,0 +1,20 @@
+Time resolution is 1 ps
+========================================
+ tb_full: ECG Accelerator Tests
+========================================
+
+--- TEST 1: NORMAL ECG ---
+  total_score  = -550551  (Python expected ~-550551)
+  is_abnormal  = 0   is_normal = 1
+  RESULT: PASS ✓
+
+--- TEST 2: ABNORMAL ECG ---
+  total_score  = 1181310  (Python expected ~1181310)
+  is_abnormal  = 1   is_normal = 0
+  RESULT: PASS ✓
+
+========================================
+ RESULTS: 2 PASSED  0 FAILED
+ STATUS: ALL TESTS PASSED - ready to program FPGA ✓
+========================================
+$finish called at time : 10175 ns : File "C:/Users/Sach/FPGA_PROJ/EDGE_AI_HACKATHON/EDGE_AI_HACKATHON.srcs/sim_1/new/tb_full.v" Line 110

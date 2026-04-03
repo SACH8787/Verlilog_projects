@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_full_func_impl.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/classifier.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/controller_fsm.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/conv1d_engine.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/max_pool.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/pe_mac.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/relu.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/rom_memory.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sources_1/new/top_accelerator.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sim_1/new/tb_full.v" \
+
+# Do not sort compile order
+nosort

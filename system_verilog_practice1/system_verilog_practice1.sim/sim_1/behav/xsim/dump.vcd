@@ -1,0 +1,38 @@
+$date
+   Mon Sep 29 22:55:22 2025
+$end
+
+$version
+  2024.1
+  $dumpfile ("dump.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 4 # temp [3:0] $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+1"
+b100 #
+$end
+
+#10000
+b1100 #
+
+#20000
+b11 #
+
+#30000
+0"
+
+#60000
+1"

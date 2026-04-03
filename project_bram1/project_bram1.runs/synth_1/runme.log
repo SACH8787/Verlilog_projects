@@ -1,0 +1,267 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Dec 14 21:36:54 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 531.262 ; gain = 198.535
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/utils_1/imports/synth_1/tb_top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/utils_1/imports/synth_1/tb_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2820
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 991.648 ; gain = 449.969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'image' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/image.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEM_FILE bound to: C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/image.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/image.mem' is read successfully [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/image.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'image' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/image.v:3]
+INFO: [Synth 8-6157] synthesizing module 's_bram_ctrl' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/s_bram_ctrl.v:3]
+	Parameter BLOCK_SIZE bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 's_bram_ctrl' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/s_bram_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'demux' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/demux.v:3]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'demux' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/demux.v:3]
+INFO: [Synth 8-6157] synthesizing module 's_bram' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/s_bram.v:23]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 's_bram' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/s_bram.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/mux.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.srcs/sources_1/new/top.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.035 ; gain = 559.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.035 ; gain = 559.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1101.035 ; gain = 559.355
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1101.035 ; gain = 559.355
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              256 Bit	(16 X 16 bit)          RAMs := 2     
++---Muxes : 
+	  33 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7k70tfbv676-1 does not have CEAM library.
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------------+-----------+----------------------+----------------+
+|top         | ram_ping/mem_reg | Implied   | 16 x 16              | RAM16X1S x 16  | 
+|top         | ram_pong/mem_reg | Implied   | 16 x 16              | RAM16X1S x 16  | 
++------------+------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------------+-----------+----------------------+----------------+
+|top         | ram_ping/mem_reg | Implied   | 16 x 16              | RAM16X1S x 16  | 
+|top         | ram_pong/mem_reg | Implied   | 16 x 16              | RAM16X1S x 16  | 
++------------+------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |LUT1     |     2|
+|3     |LUT2     |     4|
+|4     |LUT3     |     7|
+|5     |LUT4     |     2|
+|6     |LUT5     |     1|
+|7     |LUT6     |     1|
+|8     |RAM16X1S |    10|
+|9     |FDRE     |    26|
+|10    |IBUF     |     2|
+|11    |OBUF     |    16|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------+------------+------+
+|      |Instance   |Module      |Cells |
++------+-----------+------------+------+
+|1     |top        |            |    72|
+|2     |  ram_ping |s_bram      |    10|
+|3     |  ram_pong |s_bram_0    |    10|
+|4     |  u_ctrl   |s_bram_ctrl |    12|
+|5     |  u_mux    |mux         |     5|
+|6     |  u_rom    |image       |     5|
++------+-----------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1287.973 ; gain = 746.293
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1295.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1394.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 10 instances
+
+Synth Design complete | Checksum: 44f40b3c
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1394.938 ; gain = 859.566
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1394.938 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sach/FPGA PROJ/project_bram1/project_bram1.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 14 21:37:35 2025...

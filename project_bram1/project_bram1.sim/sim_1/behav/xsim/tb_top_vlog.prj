@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_bram1.srcs/sources_1/new/demux.v" \
+"../../../../project_bram1.srcs/sources_1/new/image.v" \
+"../../../../project_bram1.srcs/sources_1/new/mux.v" \
+"../../../../project_bram1.srcs/sources_1/new/s_bram.v" \
+"../../../../project_bram1.srcs/sources_1/new/s_bram_ctrl.v" \
+"../../../../project_bram1.srcs/sources_1/new/top.v" \
+"../../../../project_bram1.srcs/sources_1/new/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

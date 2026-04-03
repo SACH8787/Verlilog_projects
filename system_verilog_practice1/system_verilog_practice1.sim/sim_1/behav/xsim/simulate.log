@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Temp : 4 at time : 0
+Temp : 12 at time : 10000
+Temp : 3 at time : 20000
+$finish called at time : 200 ns : File "C:/Users/Sach/FPGA PROJ/system_verilog_practice1/system_verilog_practice1.srcs/sources_1/new/tb.v" Line 82

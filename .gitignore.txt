@@ -1,0 +1,14 @@
+# Vivado junk files
+*.jou
+*.log
+*.str
+*.dcp
+*.zip
+
+# Vivado generated folders
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/

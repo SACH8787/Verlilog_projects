@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_basys3_top_func_impl.v" \
+"../../../../../EDGE_AI_HACKATHON.srcs/sim_1/new/tb_basys3_top.v" \
+
+# Do not sort compile order
+nosort
